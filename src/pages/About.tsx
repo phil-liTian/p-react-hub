@@ -26,6 +26,8 @@ const About = () => (
         <li><strong>useToggle</strong> - 布尔状态切换</li>
         <li><strong>useUpdate</strong> - 强制组件重渲染</li>
         <li><strong>useEvent</strong> - 事件监听器管理</li>
+        <li><strong>useKey</strong> - 键盘事件监听</li>
+        <li><strong>useLatest</strong> - 获取最新状态值的引用</li>
       </ul>
       
       <h2>技术栈</h2>

@@ -1,0 +1,1 @@
+- 每次创建 hooks 文件夹下的组件 都相应在 hooks/index 里面创建对应组件 然后在 pages/About 组件中添加相应说明, 最后在 readme 中添加相应 hook 使用说明

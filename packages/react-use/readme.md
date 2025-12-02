@@ -4,6 +4,7 @@
 3. useGetSet
 4. useCounter
 5. useToggle
+6. useKey
 ```
 
 1. useEffect
@@ -280,4 +281,82 @@ const total = useMemo(() => {
 ```js
 1. 数字分割符 1_000_000
 2. function 的 length 属性： 用于返回函数形参的数量
+```
+
+6. useKey
+   用于监听键盘事件的 Hook，可以监听特定的按键或按键组合，当用户按下指定的按键时触发回调函数。支持字符串匹配、函数匹配等多种按键过滤方式，非常适合处理键盘快捷键、游戏控制等场景。
+
+```js
+// 基本用法 - 监听特定按键
+useKey("Enter", (event) => {
+  console.log("用户按下了回车键");
+});
+
+// 监听空格键
+useKey(" ", (event) => {
+  event.preventDefault(); // 阻止默认行为
+  console.log("空格键被按下");
+});
+
+// 使用函数进行复杂匹配
+useKey(
+  (event) => event.key === "a" && event.ctrlKey,
+  (event) => {
+    console.log("Ctrl + A 被按下");
+  }
+);
+
+// 监听方向键
+useKey("ArrowUp", handleUp);
+useKey("ArrowDown", handleDown);
+useKey("ArrowLeft", handleLeft);
+useKey("ArrowRight", handleRight);
+
+// 监听ESC键
+useKey("Escape", (event) => {
+  event.preventDefault();
+  // 关闭弹窗、退出全屏等
+  closeModal();
+});
+```
+
+useKey 的核心参数：
+
+- `keyFilter`: 按键过滤器，可以是字符串或函数
+  - 字符串：匹配 event.key 的值
+  - 函数：自定义匹配逻辑，返回 true 表示匹配成功
+- `fn`: 按键被匹配时触发的回调函数
+- `opts`: 可选配置项，支持自定义事件类型、目标元素等
+- `deps`: 依赖数组，控制 hook 的更新
+
+常用按键名称：
+
+- 字母数字键：'a'-'z', '0'-'9'
+- 功能键：'F1'-'F12'
+- 方向键：'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'
+- 控制键：'Enter', 'Escape', 'Tab', 'Backspace', 'Delete'
+- 修饰键：'Shift', 'Control', 'Alt', 'Meta' (Windows 键/Command 键)
+- 空格键：' ' (空格字符串)
+- 特殊键：'CapsLock', 'NumLock', 'ScrollLock'
+
+useKey 的优势：
+
+- 简洁的 API，易于使用
+- 支持多种匹配方式
+- 自动处理事件绑定和解绑
+- 支持自定义事件类型（keydown、keyup、keypress）
+- 支持指定监听的目标元素
+- 良好的 TypeScript 支持
+
+useKey 适用于：
+
+- 键盘快捷键功能
+- 游戏控制
+- 表单导航
+- 可访问性增强
+- 富文本编辑器
+- 任何需要键盘交互的场景
+
+```
+
 ```

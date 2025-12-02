@@ -59,7 +59,6 @@ export const Battery: FC = () => {
   }
 
   const { charging, level, chargingTime, dischargingTime } = battery;
-  console.log("chargingTime", chargingTime);
 
   const batteryPercentage = Math.round(level * 100);
   const batteryColor =

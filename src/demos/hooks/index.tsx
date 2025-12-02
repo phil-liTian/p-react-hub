@@ -9,6 +9,8 @@ import { GetSet } from "./GetSet";
 import { Update } from "./Update";
 import { Toggle } from "./Toggle";
 import { Event } from "./Event";
+import { Key } from "./Key";
+import { Latest } from "./Latest";
 
 const HookDemo = () => {
   const [activeSection, setActiveSection] = useState("battery");
@@ -24,6 +26,8 @@ const HookDemo = () => {
     { id: "getset", label: "⚙️ GetSet", icon: "⚙️", Component: GetSet },
     { id: "toggle", label: "🔘 切换器", icon: "🔘", Component: Toggle },
     { id: "event", label: "📡 事件监听", icon: "📡", Component: Event },
+    { id: "key", label: "⌨️ 键盘监听", icon: "⌨️", Component: Key },
+    { id: "latest", label: "📌 最新值", icon: "📌", Component: Latest },
   ];
 
   // 滚动到指定部分

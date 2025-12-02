@@ -52,7 +52,6 @@ const useBattery = (): UseBatteryState => {
         dischargingTime: battery?.dischargingTime,
         level: battery?.level,
       };
-      console.log("chargingTime", battery);
 
       setState(newState);
     };
