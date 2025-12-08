@@ -20,8 +20,17 @@ export const { genStyleHooks } = genStyleUtils({
     return { theme, realToken, hashId, token, cssVar };
   },
 
-  useCSP: () => {
-    const { csp } = useContext(configContext);
-    return csp ?? {};
-  },
+  // useCSP: () => {
+  //   const { csp } = useContext(configContext);
+  //   return csp ?? {};
+  // },
 });
+
+export const genCssVar = (antCls: string, componentAbbr: string) => {
+  const cssPrefix = `--${antCls.replace(".", "")}-${componentAbbr}-`;
+
+  return (name: string, withVar = false) => {
+    const raw = `${cssPrefix}${name}`;
+    return withVar ? `var(${raw})` : raw;
+  };
+};

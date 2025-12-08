@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ant-design/colors": "^7.2.1",
     "@ant-design/cssinjs": "^2.0.1",
     "@ant-design/cssinjs-utils": "^2.0.2",
     "clsx": "^2.1.1",

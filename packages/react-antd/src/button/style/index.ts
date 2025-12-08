@@ -1,28 +1,49 @@
+/*
+ * @Author: phil
+ * @Date: 2025-12-03 13:57:56
+ */
+import { unit } from "@ant-design/cssinjs";
 import { genStyleHooks, mergeToken } from "../../theme/internal";
-import { prepareToken } from "./token";
+import { prepareComponentToken, prepareToken } from "./token";
+import genVariantStyle from "./variant";
 
 const genSharedButtonStyle = (token) => {
   const { componentCls } = token;
+
   return {
     [componentCls]: {
+      position: "relative",
       outline: "none",
       display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
       cursor: "pointer",
+      textAlign: "center",
+      backgroundImage: "none",
     },
   };
 };
 
 const genButtonStyle = (token, prefixCls = "") => {
-  console.log("token", token);
+  const {
+    controlHeight,
+    buttonPaddingVertical,
+    buttonPaddingHorizontal,
+    borderRadius,
+  } = token;
 
   return {
     [prefixCls]: {
-      color: "red",
+      height: controlHeight,
+      padding: `${unit(buttonPaddingVertical!)} ${unit(
+        buttonPaddingHorizontal!
+      )}`,
+      borderRadius,
     },
   };
 };
 
-const genBaseButtonStyle = (token) => {
+const genSizeBaseButtonStyle = (token) => {
   const baseToken = mergeToken(token, {
     fontSize: token.contentFontSize,
   });
@@ -31,17 +52,19 @@ const genBaseButtonStyle = (token) => {
 
 export default genStyleHooks(
   "Button",
+  // @ts-ignore
   (token) => {
     const buttonToken = prepareToken(token);
 
     return [
       genSharedButtonStyle(buttonToken),
+
       // size
-      genBaseButtonStyle(buttonToken),
+      genSizeBaseButtonStyle(buttonToken),
+
+      genVariantStyle(buttonToken),
     ];
   },
-  () => {
-    return {};
-  },
+  prepareComponentToken,
   {}
 );

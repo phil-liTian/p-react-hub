@@ -159,7 +159,7 @@ const ComponentsDemo = () => {
   // 返回按钮样式
   const backButtonStyle: React.CSSProperties = {
     position: "fixed",
-    top: "20px",
+    bottom: "20px",
     right: "20px",
     zIndex: 1000,
     backgroundColor: "#6c757d",

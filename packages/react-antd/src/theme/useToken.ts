@@ -8,6 +8,19 @@ import { useCacheToken } from "@ant-design/cssinjs";
 import { DesignTokenContext } from "./context";
 import defaultSeedToken from "./themes/seed";
 import defaultTheme from "./themes/default/theme";
+import formatToken from "./utils/alias";
+
+export const getComputedToken = (originToken, overrideToken, theme) => {
+  const { override } = overrideToken;
+  const derivativeToken = theme.getDerivativeToken(originToken);
+  let mergedDerivativeToken = {
+    ...derivativeToken,
+    override,
+  };
+  mergedDerivativeToken = formatToken(mergedDerivativeToken);
+
+  return mergedDerivativeToken;
+};
 
 export default function useToken() {
   const {
@@ -23,12 +36,12 @@ export default function useToken() {
     key: "css-var-root",
     prefix: "ant",
   };
-  console.log("defaultSeedToken", defaultSeedToken, rootDesignToken);
 
   const [token, hashId, realToken] = useCacheToken(
     mergedTheme,
+    // @ts-ignore
     [defaultSeedToken, rootDesignToken],
-    { override, cssVar: { ...cssVar } }
+    { override, getComputedToken, cssVar: { ...cssVar } }
   );
 
   return [mergedTheme, realToken, hashed ? hashId : "", token, cssVar];

@@ -1,3 +1,7 @@
+/*
+ * @Author: phil
+ * @Date: 2025-12-03 19:58:14
+ */
 import React from "react";
 import { Theme } from "@ant-design/cssinjs";
 import defaultSeedToken from "./themes/seed";
@@ -21,4 +25,5 @@ const defaultConfig = {
 };
 
 export const DesignTokenContext =
+  //@ts-ignore
   React.createContext<DesignTokenProviderProps>(defaultConfig);
