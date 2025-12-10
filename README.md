@@ -92,7 +92,7 @@ function LatestDemo() {
     const timer = setTimeout(() => {
       console.log("最新计数值:", latestCount.current);
     }, 1000);
-    
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -163,7 +163,7 @@ npm run publish
 
 项目包含完整的 Hooks 演示页面，展示了每个 Hook 的使用方法和效果。
 
-访问 [在线演示](https://phil-litian.github.io/p-react-use/) 查看所有 Hooks 的实际应用。
+访问 [在线演示](https://phil-litian.github.io/p-react-hub/) 查看所有 Hooks 的实际应用。
 
 ## 📄 许可证
 
