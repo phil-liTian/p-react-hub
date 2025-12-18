@@ -108,8 +108,9 @@ const About = () => {
             个人简介
           </h2>
           <p style={{ marginBottom: "15px" }}>
-            我是一名充满激情的前端工程师，专注于 React
-            生态系统开发。拥有丰富的大型项目开发经验，擅长组件化开发、性能优化和用户体验提升。
+            我是一名充满激情的前端工程师，专注于 Vue
+            生态系统开发，同时也具备丰富的 React
+            开发经验。拥有丰富的大型项目开发经验，擅长组件化开发、性能优化和用户体验提升。
           </p>
           <p>
             热衷于探索新技术，喜欢分享技术心得，致力于构建高质量、可维护的前端应用。
@@ -145,10 +146,11 @@ const About = () => {
                 💻 前端技术
               </h3>
               <ul style={{ listStyle: "none", padding: 0 }}>
+                <li>• Vue 3 / Vue Composition API / Pinia</li>
                 <li>• React 19 / React Hooks / Context API</li>
                 <li>• TypeScript / JavaScript ES6+</li>
                 <li>• HTML5 / CSS3 / Sass / Less</li>
-                <li>• Ant Design / Material-UI</li>
+                <li>• Element Plus / Ant Design / Material-UI</li>
                 <li>• Tailwind CSS / Styled-components</li>
               </ul>
             </div>
@@ -204,15 +206,13 @@ const About = () => {
               }}
             >
               <h3 style={{ color: "#333", marginBottom: "8px" }}>
-                🚀 React 组件库开发
+                🚀 Vue 企业级应用开发
               </h3>
               <p style={{ color: "#666", marginBottom: "8px" }}>
-                <strong>技术栈：</strong>React 19 + TypeScript + Vite + Ant
-                Design
+                <strong>技术栈：</strong>Vue 3 + TypeScript + Vite + Element Plus
               </p>
               <p style={{ color: "#555" }}>
-                主导开发企业级 React 组件库，包含 50+
-                高质量组件，支持主题定制、国际化。
+                主导开发多个企业级 Vue 应用，包含完整的业务功能模块，支持权限管理、数据可视化、主题定制等。
               </p>
             </div>
             <div
@@ -228,7 +228,7 @@ const About = () => {
                 📱 移动端 H5 应用
               </h3>
               <p style={{ color: "#666", marginBottom: "8px" }}>
-                <strong>技术栈：</strong>React + TypeScript + Webpack + PWA
+                <strong>技术栈：</strong>Vue 3 + TypeScript + Vite + PWA
               </p>
               <p style={{ color: "#555" }}>
                 负责移动端电商项目开发，实现了 PWA
@@ -247,10 +247,71 @@ const About = () => {
                 🏗️ 微前端架构
               </h3>
               <p style={{ color: "#666", marginBottom: "8px" }}>
-                <strong>技术栈：</strong>qiankun + React + Vue + Single-SPA
+                <strong>技术栈：</strong>qiankun + Vue 3 + React + Single-SPA
               </p>
               <p style={{ color: "#555" }}>
                 设计并实现微前端架构，支持多技术栈子应用集成，解决了大型项目的模块化开发和部署问题。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 工作经历 */}
+        <section style={{ marginBottom: getSpacing(30, 25) }}>
+          <h2
+            style={{
+              color: "#333",
+              marginBottom: "15px",
+              fontSize: getFontSize(24, 20),
+              borderBottom: "2px solid #13c2c2",
+              paddingBottom: "8px",
+              display: "inline-block",
+            }}
+          >
+            工作经历
+          </h2>
+          <div style={{ marginTop: "20px" }}>
+            <div
+              style={{
+                backgroundColor: "#f6f8fa",
+                padding: "20px",
+                borderRadius: "8px",
+                marginBottom: "15px",
+                borderLeft: "4px solid #13c2c2",
+              }}
+            >
+              <h3 style={{ color: "#333", marginBottom: "8px" }}>
+                🏢 京东科技集团有限公司
+              </h3>
+              <p style={{ color: "#666", marginBottom: "8px" }}>
+                <strong>职位：</strong>高级前端工程师
+              </p>
+              <p style={{ color: "#666", marginBottom: "8px" }}>
+                <strong>时间：</strong>2025年4月 - 至今
+              </p>
+              <p style={{ color: "#555" }}>
+                负责企业级前端项目开发，参与多个大型项目的技术选型和架构设计，积累了丰富的Vue和React生态系统以及TypeScript开发经验。
+              </p>
+            </div>
+            <div
+              style={{
+                backgroundColor: "#f6f8fa",
+                padding: "20px",
+                borderRadius: "8px",
+                borderLeft: "4px solid #faad14",
+              }}
+            >
+              <h3 style={{ color: "#333", marginBottom: "8px" }}>
+                🏢 上海博卡软件科技有限公司
+              </h3>
+              <p style={{ color: "#666", marginBottom: "8px" }}>
+                <strong>职位：</strong>前端工程师
+              </p>
+              <p style={{ color: "#666", marginBottom: "8px" }}>
+                <strong>时间：</strong>2020年10月 - 2025年4月
+              </p>
+              <p style={{ color: "#555" }}>
+                参与SaaS平台的前端开发工作，负责多个核心模块的设计与实现，深入理解了企业级应用的开发流程和最佳实践。
               </p>
             </div>
           </div>
@@ -302,7 +363,7 @@ const About = () => {
               }}
             >
               <span style={{ fontSize: "20px", marginRight: "10px" }}>💬</span>
-              <span>微信: phil_tian</span>
+              <span>微信: philli1123</span>
             </div>
             <div
               style={{
@@ -314,7 +375,7 @@ const About = () => {
               }}
             >
               <span style={{ fontSize: "20px", marginRight: "10px" }}>🔗</span>
-              <span>GitHub: @phil-liTian</span>
+              <span>GitHub: https://github.com/phil-liTian</span>
             </div>
           </div>
         </section>

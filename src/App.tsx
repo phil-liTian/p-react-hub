@@ -12,7 +12,9 @@ import NotFound from "./pages/404";
 
 function App() {
   return (
-    <div style={{ height: "100vh", backgroundColor: "#f8f9fa" }}>
+    <div
+      style={{ height: "100vh", backgroundColor: "#f8f9fa", overflowY: "auto" }}
+    >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/hooks" element={<HookDemo />} />

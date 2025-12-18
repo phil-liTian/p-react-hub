@@ -59,11 +59,10 @@ const Home = () => {
   return (
     <div
       style={{
-        padding: isMobile ? "20px 15px" : "40px 20px",
+        padding: isMobile ? "20px 10px" : "40px 20px",
         textAlign: "center",
         backgroundColor: "#f8f9fa",
         height: "100%",
-        overflowY: "auto",
       }}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
@@ -75,7 +74,7 @@ const Home = () => {
           maxWidth: "1200px",
           margin: "0 auto",
           paddingTop: isMobile ? "20px" : "40px",
-          paddingBottom: isMobile ? "20px" : "40px",
+          paddingBottom: isMobile ? "40px" : "40px",
           overflowY: "hidden",
         }}
       >
