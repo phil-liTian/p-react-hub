@@ -16,6 +16,7 @@ export default defineConfig({
     alias: {
       "@": "/src",
       "@c": "/src/components",
+      "@admin": "/src/pages/admin",
     },
   },
 });
