@@ -2,7 +2,7 @@
  * @Author: phil
  * @Date: 2025-12-19 12:16:05
  */
-import { pages as views, layout } from "./imports";
+import { layout } from "./imports";
 
 export function transformElegantRoutesToReactRoutes(routes) {
   return routes.flatMap(transformElegantRoutesToReactRoute);

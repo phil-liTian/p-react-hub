@@ -2,13 +2,6 @@
  * @Author: phil
  * @Date: 2025-07-23 17:05:46
  */
-import { Routes, Route, Navigate } from "react-router-dom";
-import { HookDemo } from "./demos/hooks/index";
-import { ComponentsDemo } from "./demos/components/index";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Tiktok from "./pages/douyin/home";
-import NotFound from "./pages/404";
 import { RouterProvider } from "@/features/router/RouterProvider";
 
 function App() {
@@ -31,7 +24,7 @@ function App() {
     <div
       style={{ height: "100vh", backgroundColor: "#f8f9fa", overflowY: "auto" }}
     >
-    <RouterProvider />
+      <RouterProvider />
     </div>
   );
 }
