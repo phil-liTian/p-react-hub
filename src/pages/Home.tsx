@@ -232,6 +232,46 @@ const Home = () => {
             </Link>
           </div>
 
+          {/* Admin 项目区域 */}
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "30px",
+              borderRadius: "12px",
+              boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+              textAlign: "center",
+              minWidth: "280px",
+            }}
+          >
+            <div style={{ fontSize: "48px", marginBottom: "15px" }}>🛠️</div>
+            <h3
+              style={{ fontSize: "24px", color: "#333", marginBottom: "15px" }}
+            >
+              Admin 管理系统
+            </h3>
+            <p
+              style={{ fontSize: "16px", color: "#666", marginBottom: "20px" }}
+            >
+              基于 Monorepo
+              架构开发的企业级后台管理系统，采用优雅的路由设计、自定义脚本自动化处理，支持模块化开发和灵活的权限管理
+            </p>
+            <Link
+              to="/admin"
+              style={{
+                display: "inline-block",
+                padding: "12px 24px",
+                backgroundColor: "#fa8c16",
+                color: "white",
+                textDecoration: "none",
+                borderRadius: "6px",
+                fontSize: "16px",
+                transition: "background-color 0.3s",
+              }}
+            >
+              进入 Admin
+            </Link>
+          </div>
+
           {/* 个人介绍区域 */}
           <div
             style={{

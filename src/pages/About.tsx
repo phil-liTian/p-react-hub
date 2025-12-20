@@ -209,10 +209,12 @@ const About = () => {
                 🚀 Vue 企业级应用开发
               </h3>
               <p style={{ color: "#666", marginBottom: "8px" }}>
-                <strong>技术栈：</strong>Vue 3 + TypeScript + Vite + Element Plus
+                <strong>技术栈：</strong>Vue 3 + TypeScript + Vite + Element
+                Plus
               </p>
               <p style={{ color: "#555" }}>
-                主导开发多个企业级 Vue 应用，包含完整的业务功能模块，支持权限管理、数据可视化、主题定制等。
+                主导开发多个企业级 Vue
+                应用，包含完整的业务功能模块，支持权限管理、数据可视化、主题定制等。
               </p>
             </div>
             <div
@@ -240,6 +242,7 @@ const About = () => {
                 backgroundColor: "#f6f8fa",
                 padding: "20px",
                 borderRadius: "8px",
+                marginBottom: "15px",
                 borderLeft: "4px solid #722ed1",
               }}
             >
@@ -251,6 +254,30 @@ const About = () => {
               </p>
               <p style={{ color: "#555" }}>
                 设计并实现微前端架构，支持多技术栈子应用集成，解决了大型项目的模块化开发和部署问题。
+              </p>
+            </div>
+            <div
+              style={{
+                backgroundColor: "#f6f8fa",
+                padding: "20px",
+                borderRadius: "8px",
+                borderLeft: "4px solid #fa8c16",
+              }}
+            >
+              <h3 style={{ color: "#333", marginBottom: "8px" }}>
+                🛠️ Admin 管理系统
+              </h3>
+              <p style={{ color: "#666", marginBottom: "8px" }}>
+                <strong>技术亮点：</strong>Monorepo + 优雅路由 + 自定义脚本 +
+                模块化架构
+              </p>
+              <p style={{ color: "#555", marginBottom: "8px" }}>
+                基于 Monorepo
+                架构开发的企业级后台管理系统，采用优雅的路由设计、自定义脚本自动化处理，支持模块化开发和灵活的权限管理。
+              </p>
+              <p style={{ color: "#555" }}>
+                <strong>核心特性：</strong>🚀 微前端架构支持 | 🎯 动态权限控制 |
+                ⚡ 高性能优化 | 📦 组件化开发 | 🔧 工程化脚本
               </p>
             </div>
           </div>

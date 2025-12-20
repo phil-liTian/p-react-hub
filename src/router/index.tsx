@@ -6,11 +6,12 @@
 // import Tiktok from "@/pages/douyin/home/index";
 import { generatedRoutes } from "./elegant/routes";
 import { getReactRoutes } from "./routes";
+import { baseRoutes } from './base/index.tsx'
 
 function initRoutes() {
   const customeRoutes = getReactRoutes(generatedRoutes);
 
-  const constantRoutes = [...customeRoutes];
+  const constantRoutes = [ ...baseRoutes, ...customeRoutes];
 
   // const routes = [
   //   {

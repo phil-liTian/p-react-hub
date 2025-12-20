@@ -28,8 +28,11 @@ function App() {
     //     <Route path="*" element={<Navigate to="/404" replace />} />
     //   </Routes>
     // </div>
-
+    <div
+      style={{ height: "100vh", backgroundColor: "#f8f9fa", overflowY: "auto" }}
+    >
     <RouterProvider />
+    </div>
   );
 }
 
