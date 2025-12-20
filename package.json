@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "gen-route": "pa cc",
     "commit": "pa git-commit",
+    "commit:en": "pa git-commit -l=en-us",
     "deploy": "gh-pages -d dist",
     "publish": "npm run build && npm run deploy"
   },

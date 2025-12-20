@@ -19,13 +19,14 @@ interface CommandArg {
 async function setupCli() {
   const cli = cac(blue("phil admin"));
 
+  cli.option('-l, --lang <lang>', 'specify language');
+
   const commands: CommandWithAction = {
     'git-commit': {
       desc: 'git commit',
       action: async (args?: CommandArg) => {
         const { lang } = args || {};
         await gitCommit(lang);
-        console.log(`Git commit command executed with lang: ${lang}`);
       }
     }
   }
