@@ -9,6 +9,7 @@ import { getReactRoutes } from "./routes";
 import { baseRoutes } from './base/index.tsx'
 
 function initRoutes() {
+  
   const customeRoutes = getReactRoutes(generatedRoutes);
 
   const constantRoutes = [ ...baseRoutes, ...customeRoutes];

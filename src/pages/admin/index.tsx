@@ -1,3 +1,5 @@
+import { Navigate } from "react-router-dom";
+
 export default () => {
-  return <div>home</div>;
+  return <Navigate to={"/admin"} />;
 };

@@ -110,7 +110,7 @@ const Home = () => {
             gap: isMobile ? "20px" : "50px",
             maxWidth: "1000px",
             marginBottom: isMobile ? "30px" : "40px",
-            padding: isMobile ? "0 10px" : "0",
+            padding: isMobile ? "0" : "0",
           }}
         >
           {/* 抖音应用区域 */}
