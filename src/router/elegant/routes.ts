@@ -21,8 +21,6 @@ export const generatedRoutes: ElegantConstRoute[] = [
       {
         matchedFiles: ['admin_(base)', null, null, null],
         name: 'admin_(base)',
-        path: null,
-        handle: null,
         children: [
           {
             matchedFiles: [null, '/src/pages/admin/(base)/home/index.tsx', null, null],
@@ -30,7 +28,8 @@ export const generatedRoutes: ElegantConstRoute[] = [
             path: '/admin/home',
             handle: { title: 'admin_(base)_home' }
           }
-        ]
+        ],
+        path: null
       }
     ]
   },

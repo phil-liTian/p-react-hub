@@ -16,15 +16,16 @@
     "publish": "npm run build && npm run deploy"
   },
   "dependencies": {
+    "@pa/materials": "workspace:*",
     "@react/antd": "workspace:*",
     "@react/use": "workspace:*",
-    "@pa/materials": "workspace:*",
     "@soybean-react/vite-plugin-react-router": "^0.7.3",
     "clsx": "^2.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.6",
     "tsx": "^4.21.0",
+    "unplugin-auto-import": "^20.3.0",
     "vite-plugin-remove-console": "^2.2.0"
   },
   "devDependencies": {
@@ -44,6 +45,7 @@
     "less": "^4.4.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
+    "unocss": "^66.5.10",
     "vite": "^7.2.4"
   }
 }

@@ -8,7 +8,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
   Footer,
 }) => {
   return (
-    <section>
+    <section className="relative h-full">
       <section>
         <header>{Header}</header>
       </section>
