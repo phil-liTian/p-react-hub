@@ -13,14 +13,16 @@ import type { ElegantConstRoute } from '@soybean-react/vite-plugin-react-router'
 
 export const generatedRoutes: ElegantConstRoute[] = [
   {
-    matchedFiles: ['admin', '/src/pages/admin/index.tsx', null, null],
+    matchedFiles: ['admin', '/src/pages/admin/index.tsx', '/src/pages/admin/loading.tsx', null],
     name: 'admin',
     path: '/admin',
     handle: { title: 'admin' },
     children: [
       {
-        matchedFiles: [null, null, null, null],
+        matchedFiles: ['admin_(base)', null, null, null],
         name: 'admin_(base)',
+        path: null,
+        handle: null,
         children: [
           {
             matchedFiles: [null, '/src/pages/admin/(base)/home/index.tsx', null, null],
@@ -28,8 +30,7 @@ export const generatedRoutes: ElegantConstRoute[] = [
             path: '/admin/home',
             handle: { title: 'admin_(base)_home' }
           }
-        ],
-        path: null
+        ]
       }
     ]
   },

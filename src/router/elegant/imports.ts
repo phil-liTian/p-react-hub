@@ -7,18 +7,15 @@
 // 如果需要修改，请在优雅路由配置文件中进行修改
 // 这是自动生成的文件，请不要手动修改
 
-
-
 export const layouts: Record<string, () => Promise<any>> = {
 "admin_(base)": () => import("@/pages/admin/(base)/layout.tsx"),
 "admin": () => import("@/pages/admin/layout.tsx"),
 };
 
 export const pages: Record<string, () => Promise<any>> = {
-"admin_(base)_home": () => import("@/pages/admin/(base)/home/index.tsx"),
-"admin": () => import("@/pages/admin/index.tsx"),
-"douyin_home": () => import("@/pages/douyin/home/index.tsx"),
+  "admin_(base)_home": () => import("@/pages/admin/(base)/home/index.tsx"),
+  admin: () => import("@/pages/admin/index.tsx"),
+  douyin_home: () => import("@/pages/douyin/home/index.tsx"),
 };
 
-export const errors: Record<string, () => Promise<any>> = {
-};
+export const errors: Record<string, () => Promise<any>> = {};

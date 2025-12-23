@@ -1,8 +1,9 @@
+import BaseLayout from "@/layouts/base-layout/index";
 
-const Layout = () => {
-  return <div>Layout</div>;
+const BlankLayout = () => {
+  return <BaseLayout />;
 };
 
 
-export default Layout;
+export default BlankLayout;
   

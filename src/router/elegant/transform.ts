@@ -4,10 +4,12 @@
  */
 import { layouts, pages as views } from "./imports";
 
-const loadings = import.meta.glob(`/src/pages/admin/**/loading.tsx`, { eager: true, import: 'default' })
+const loadings = import.meta.glob(`/src/pages/admin/**/loading.tsx`, {
+  eager: true,
+  import: "default",
+});
 
 export function transformElegantRoutesToReactRoutes(routes) {
-  
   return routes.flatMap(transformElegantRoutesToReactRoute);
 }
 
@@ -28,13 +30,11 @@ function transformElegantRoutesToReactRoute(route) {
       return converConfig(config);
     }
 
-    let pageName = name
-    
+    let pageName = name;
 
-    if ( matchedFiles[1] && (!children?.length||index) ) {
-      
-      const config = await views[pageName]()
-      return converConfig(config)
+    if (matchedFiles[1] && (!children?.length || index)) {
+      const config = await views[pageName]();
+      return converConfig(config);
     }
 
     return null;
@@ -43,7 +43,9 @@ function transformElegantRoutesToReactRoute(route) {
   const reactRoute = {
     children: [],
     path,
-    HydrateFallback: matchedFiles[2] ? loadings[matchedFiles[2]] : loadings['/src/pages/admin/loading.tsx'],
+    HydrateFallback: matchedFiles[2]
+      ? loadings[matchedFiles[2]]
+      : loadings["/src/pages/admin/loading.tsx"],
     lazy: async () => {
       return {
         ...(await getConfig()),
@@ -51,8 +53,8 @@ function transformElegantRoutesToReactRoute(route) {
     },
   };
 
-  if ( children?.length ) {
-    reactRoute.children = children.flatMap(transformElegantRoutesToReactRoute)
+  if (children?.length) {
+    reactRoute.children = children.flatMap(transformElegantRoutesToReactRoute);
   }
 
   return reactRoute;

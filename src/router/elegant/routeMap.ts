@@ -7,39 +7,39 @@
 // 如果需要修改，请在优雅路由配置文件中进行修改
 // 这是自动生成的文件，请不要手动修改
 
-
 import type { RouteKey, RouteMap, RoutePath } from '@soybean-react/vite-plugin-react-router';
 
 /**
-* map of route name and route path
-*/
+ * map of route name and route path
+ */
 export const routeMap: RouteMap = {
- "not-found": "*",
- "root": "/",
- "admin": "/admin",
- "admin_(base)_home": "/admin/home",
- "douyin": "/douyin",
- "douyin_home": "/douyin/home"
+  "not-found": "*",
+  root: "/",
+  admin: "/admin",
+  "admin_(base)_home": "/admin/home",
+  douyin: "/douyin",
+  douyin_home: "/douyin/home",
 };
 
 /**
-* get route path by route name
-*
-* @param name route name
-*/
+ * get route path by route name
+ *
+ * @param name route name
+ */
 export function getRoutePath<T extends RouteKey>(name: T) {
- return routeMap[name];
+  return routeMap[name];
 }
 
 /**
-* get route name by route path
-*
-* @param path route path
-*/
+ * get route name by route path
+ *
+ * @param path route path
+ */
 export function getRouteName(path: RoutePath) {
- const routeEntries = Object.entries(routeMap) as [RouteKey, RoutePath][];
+  const routeEntries = Object.entries(routeMap) as [RouteKey, RoutePath][];
 
- const routeName: RouteKey | null = routeEntries.find(([, routePath]) => routePath === path)?.[0] || null;
+  const routeName: RouteKey | null =
+    routeEntries.find(([, routePath]) => routePath === path)?.[0] || null;
 
- return routeName;
+  return routeName;
 }
