@@ -316,9 +316,21 @@ const About = () => {
               <p style={{ color: "#666", marginBottom: "8px" }}>
                 <strong>时间：</strong>2025年4月 - 至今
               </p>
-              <p style={{ color: "#555" }}>
+              <p style={{ color: "#555", marginBottom: "12px" }}>
                 负责企业级前端项目开发，参与多个大型项目的技术选型和架构设计，积累了丰富的Vue和React生态系统以及TypeScript开发经验。
               </p>
+              <div style={{ marginTop: "12px" }}>
+                <p style={{ color: "#1890ff", fontWeight: "500", marginBottom: "8px" }}>💡 任职期间表现：</p>
+                <ul style={{ color: "#555", margin: 0, paddingLeft: "20px", lineHeight: "1.8" }}>
+                  <li>主导微前端架构改造项目，成功将多个独立应用整合为统一的微前端平台，提升了开发效率和系统可维护性</li>
+                  <li>多次在部门内进行技术分享：
+                    <ul style={{ marginTop: "4px", color: "#666" }}>
+                      <li>第一次：微前端架构设计原理与实践经验分享</li>
+                      <li>第二次：AI在前端开发中的实践应用与探索分享</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div
               style={{

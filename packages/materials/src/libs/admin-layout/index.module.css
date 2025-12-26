@@ -1,0 +1,12 @@
+.layout-sider {
+  width: 100px;
+}
+
+.left-gap {
+  padding-left: 100px;
+}
+
+.layout-header,
+.layout-header-placement {
+  height: 100px;
+}
