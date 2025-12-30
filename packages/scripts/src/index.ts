@@ -5,17 +5,22 @@
 import cac from "cac";
 import { blue } from "kolorist";
 import type { Lang } from "./locales/index.ts";
-import { gitCommit, gitCommitVerify } from "./commands/git-commit.ts";
-import { genChangelog } from "./commands/changelog.ts";
 import { loadCliOptions } from "./config/index.ts";
-import { cleanup } from "./commands/cleanup.ts";
-import { release } from "./commands/release.ts";
+import {
+  updatePkg,
+  release,
+  cleanup,
+  genChangelog,
+  gitCommit,
+  gitCommitVerify,
+} from "./commands/index.ts";
 
 type Command =
   | "changelog"
   | "git-commit"
   | "git-commit-verify"
   | "cleanup"
+  | "update-pkg"
   | "release";
 type CommandAction<A extends object> = (args?: A) => Promise<void> | void;
 
@@ -67,9 +72,16 @@ async function setupCli() {
       },
     },
     release: {
-      desc: "发布",
+      desc: "发布 新增一个tag 可自定义tag",
       action: async (args) => {
         await release(args?.execute, args?.push);
+      },
+    },
+
+    "update-pkg": {
+      desc: "升级package.json中包的版本",
+      action: async () => {
+        return updatePkg(cliOptions.ncuCommandArgs);
       },
     },
   };

@@ -13,6 +13,7 @@
     "release": "pa release",
     "gen-route": "pa cc",
     "commit": "pa git-commit",
+    "update-pkg": "pa update-pkg",
     "commit:en": "pa git-commit -l=en-us",
     "changelog": "pa changelog",
     "prepare": "simple-git-hooks",
