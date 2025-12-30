@@ -8,8 +8,15 @@ import type { Lang } from "./locales/index.ts";
 import { gitCommit, gitCommitVerify } from "./commands/git-commit.ts";
 import { genChangelog } from "./commands/changelog.ts";
 import { loadCliOptions } from "./config/index.ts";
+import { cleanup } from "./commands/cleanup.ts";
+import { release } from "./commands/release.ts";
 
-type Command = "changelog" | "git-commit" | "git-commit-verify";
+type Command =
+  | "changelog"
+  | "git-commit"
+  | "git-commit-verify"
+  | "cleanup"
+  | "release";
 type CommandAction<A extends object> = (args?: A) => Promise<void> | void;
 
 type CommandWithAction<A extends object = object> = Record<
@@ -21,6 +28,10 @@ interface CommandArg {
   lang?: Lang;
 
   total?: boolean;
+
+  execute?: string;
+
+  push?: boolean;
 }
 
 async function setupCli() {
@@ -47,6 +58,18 @@ async function setupCli() {
       desc: "生成修改日志",
       action: async (args?) => {
         await genChangelog(cliOptions.changelogOptions, args?.total);
+      },
+    },
+    cleanup: {
+      desc: "清空内容, 包括 node_modules、dist文件",
+      action: async () => {
+        await cleanup(cliOptions.cleanupDirs);
+      },
+    },
+    release: {
+      desc: "发布",
+      action: async (args) => {
+        await release(args?.execute, args?.push);
       },
     },
   };

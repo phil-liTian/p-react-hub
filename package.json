@@ -1,7 +1,7 @@
 {
   "name": "p-ant-design",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "start": "npm run dev",
@@ -9,6 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "cleanup": "pa cleanup",
+    "release": "pa release",
     "gen-route": "pa cc",
     "commit": "pa git-commit",
     "commit:en": "pa git-commit -l=en-us",
@@ -38,6 +40,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
     "boxen": "^8.0.1",
+    "bumpp": "^10.3.2",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
