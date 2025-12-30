@@ -12,6 +12,8 @@
     "gen-route": "pa cc",
     "commit": "pa git-commit",
     "commit:en": "pa git-commit -l=en-us",
+    "changelog": "pa changelog",
+    "prepare": "simple-git-hooks",
     "deploy": "gh-pages -d dist",
     "publish": "npm run build && npm run deploy"
   },
@@ -43,9 +45,13 @@
     "globals": "^16.5.0",
     "gradient-string": "^3.0.0",
     "less": "^4.4.2",
+    "simple-git-hooks": "^2.13.1",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
     "unocss": "^66.5.10",
     "vite": "^7.2.4"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm pa git-commit-verify"
   }
 }

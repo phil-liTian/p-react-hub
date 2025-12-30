@@ -1,0 +1,76 @@
+import type { CliOption } from "./packages/scripts/src/types";
+
+const config: CliOption = {
+  changelogOptions: {
+    github: {
+      repo: "phil-liTian/pReactUse",
+      token: process.env.GITHUB_TOKEN || "",
+    },
+    from: "",
+    to: "HEAD",
+    output: "CHANGELOG.md",
+    capitalize: true,
+    emoji: true,
+    regenerate: false,
+    prerelease: false,
+    titles: {
+      breakingChanges: "⚠ BREAKING CHANGES",
+    },
+    types: {
+      feat: "✨ Features",
+      fix: "🐛 Bug Fixes",
+      docs: "📚 Documentation",
+      style: "💄 Styles",
+      refactor: "♻️ Code Refactoring",
+      perf: "⚡ Performance Improvements",
+      optimize: "🔧 Optimizations",
+      test: "✅ Tests",
+      build: "📦 Build System",
+      ci: "👷 Continuous Integration",
+      chore: "🔨 Chores",
+      revert: "⏪ Reverts",
+    },
+  },
+  cleanupDirs: [
+    "**/dist",
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/pnpm-lock.yaml",
+    "**/node_modules",
+    "!node_modules/**",
+  ],
+  cwd: process.cwd(),
+  gitCommitScopes: [
+    ["projects", "project"],
+    ["packages", "packages"],
+    ["components", "components"],
+    ["hooks", "hook functions"],
+    ["utils", "utils functions"],
+    ["types", "TS declaration"],
+    ["styles", "style"],
+    ["deps", "project dependencies"],
+    ["release", "release project"],
+    ["other", "other changes"],
+  ],
+  gitCommitTypes: [
+    ["feat", "A new feature"],
+    ["fix", "A bug fix"],
+    ["docs", "Documentation only changes"],
+    ["style", "Changes that do not affect the meaning of the code"],
+    ["refactor", "A code change that neither fixes a bug nor adds a feature"],
+    ["perf", "A code change that improves performance"],
+    ["optimize", "A code change that optimizes code quality"],
+    ["test", "Adding missing tests or correcting existing tests"],
+    ["build", "Changes that affect the build system or external dependencies"],
+    ["ci", "Changes to our CI configuration files and scripts"],
+    ["chore", "Other changes that don't modify src or test files"],
+    ["revert", "Reverts a previous commit"],
+  ],
+  ncuCommandArgs: ["--deep", "-u"],
+  author: {
+    name: "phil",
+    email: "phil-liTian",
+  },
+};
+
+export default config;
