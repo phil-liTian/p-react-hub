@@ -3,13 +3,17 @@ import classNames from "clsx";
 import type { AdminLayoutProps } from "../../types/index";
 import style from "./index.module.css";
 import "./index.module.css";
+import { createLayoutCssVars } from "./shared";
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({
   children,
   Header,
   Sider,
   Footer,
+  siderWidth = 220,
 }) => {
+  const cssVar = createLayoutCssVars({ siderWidth }) as React.CSSProperties;
+
   const leftGapClass = () => {
     return style["left-gap"];
   };
@@ -17,7 +21,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({
   const headerLeftGapClass = leftGapClass();
 
   return (
-    <section className="relative h-full">
+    <section className="relative h-full" style={cssVar}>
       <section className={classNames("flex flex-col h-full")}>
         <>
           <header

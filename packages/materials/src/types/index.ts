@@ -8,4 +8,8 @@ export type Slots = {
   Tab?: React.ReactNode;
 };
 
-export interface AdminLayoutProps extends Slots {}
+interface AdminLayoutSiderConfig {
+  siderWidth?: number;
+}
+
+export interface AdminLayoutProps extends Slots, AdminLayoutSiderConfig {}

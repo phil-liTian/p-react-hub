@@ -1,9 +1,9 @@
 .layout-sider {
-  width: 220px;
+  width: var(--p-sider-width);
 }
 
 .left-gap {
-  padding-left: 220px;
+  padding-left: var(--p-sider-width);
 }
 
 .layout-header,
