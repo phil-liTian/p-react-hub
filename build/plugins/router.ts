@@ -8,8 +8,6 @@ export function setupElegantRouter() {
       let meta: RouteMeta = {};
 
       if (routeName.startsWith("admin_") && key) {
-        console.log("routeName", routeName);
-
         meta = {
           i18nKey: `route.${routeName}`,
           title: key,

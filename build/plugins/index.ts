@@ -8,8 +8,9 @@ import removeConsole from "vite-plugin-remove-console";
 import { setupElegantRouter } from "./router";
 import { setupUnocss } from "./unocss";
 import { setupAutoImport } from "./auto-import";
+import { setupHtmlPlugin } from "./html";
 
-export function setupVitePlugin() {
+export function setupVitePlugin(buildTime: string) {
   const plugins: PluginOption = [
     setupProjectInfo(),
     removeConsole(),
@@ -18,6 +19,8 @@ export function setupVitePlugin() {
     setupUnocss(),
     // 自动引入组件
     setupAutoImport(),
+
+    setupHtmlPlugin(buildTime),
   ];
 
   return plugins;

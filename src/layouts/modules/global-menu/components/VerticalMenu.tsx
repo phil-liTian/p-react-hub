@@ -13,6 +13,7 @@ export const VerticalMenu = memo(() => {
     <AMenu
       className="size-full"
       mode="inline"
+      // @ts-ignore
       items={allMenus}
       onSelect={handleMenuClick}
     ></AMenu>

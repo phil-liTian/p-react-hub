@@ -15,6 +15,7 @@ export function setupAutoImport() {
 
 function autoImportAntd(componentName: string) {
   const pattern = /^A[A-Z]/;
+
   if (pattern.test(componentName)) {
     return { from: "antd", name: componentName.slice(1) };
   }

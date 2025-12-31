@@ -5,7 +5,7 @@ interface Props {
   reverse: boolean;
 }
 
-export const GlobalMenu = memo(({ mode, reverse }: Props) => {
+export const GlobalMenu = memo(({ mode }: Props) => {
   if (mode === "vertical") return <VerticalMenu />;
 
   return <VerticalMenu />;
