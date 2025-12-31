@@ -18,7 +18,10 @@ declare module "@soybean-react/vite-plugin-react-router" {
     "not-found": "*";
     "root": "/";
     "admin": "/admin";
+    "admin_(base)_about": "/admin/about";
+    "admin_(base)_function": "/admin/function";
     "admin_(base)_home": "/admin/home";
+    "admin_(base)_user-center": "/admin/user-center";
     "douyin": "/douyin";
     "douyin_home": "/douyin/home";
   };
@@ -70,8 +73,11 @@ declare module "@soybean-react/vite-plugin-react-router" {
    */
   export type LastLevelRouteKey = Extract<
     RouteKey,
+    | "admin_(base)_about"
+    | "admin_(base)_function"
     | "admin_(base)_home"
     | "admin_(base)"
+    | "admin_(base)_user-center"
     | "admin"
     | "admin"
     | "admin"

@@ -43,6 +43,7 @@ function transformElegantRoutesToReactRoute(route) {
   const reactRoute = {
     children: [],
     path,
+    id: name,
     HydrateFallback: matchedFiles[2]
       ? loadings[matchedFiles[2]]
       : loadings["/src/pages/admin/loading.tsx"],

@@ -23,10 +23,28 @@ export const generatedRoutes: ElegantConstRoute[] = [
         name: 'admin_(base)',
         children: [
           {
+            matchedFiles: [null, '/src/pages/admin/(base)/about/index.tsx', null, null],
+            name: 'admin_(base)_about',
+            path: '/admin/about',
+            handle: { title: 'admin_(base)_about', i18nKey: 'route.(base)_about' }
+          },
+          {
+            matchedFiles: [null, '/src/pages/admin/(base)/function/index.tsx', null, null],
+            name: 'admin_(base)_function',
+            path: '/admin/function',
+            handle: { title: 'admin_(base)_function', i18nKey: 'route.(base)_function' }
+          },
+          {
             matchedFiles: [null, '/src/pages/admin/(base)/home/index.tsx', null, null],
             name: 'admin_(base)_home',
             path: '/admin/home',
-            handle: { title: 'admin_(base)_home' }
+            handle: { title: 'admin_(base)_home', i18nKey: 'route.(base)_home' }
+          },
+          {
+            matchedFiles: [null, '/src/pages/admin/(base)/user-center/index.tsx', null, null],
+            name: 'admin_(base)_user-center',
+            path: '/admin/user-center',
+            handle: { title: 'admin_(base)_user-center', i18nKey: 'route.(base)_user-center' }
           }
         ],
         path: null

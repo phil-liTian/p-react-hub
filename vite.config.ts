@@ -20,6 +20,7 @@ export default defineConfig((configEnv) => {
       alias: {
         "@": "/src",
         "@c": "/src/components",
+        "@ca": "/src/components/admin",
         "@admin": "/src/pages/admin",
       },
     },

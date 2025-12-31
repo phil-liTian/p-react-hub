@@ -1,4 +1,3 @@
-import AdminLayout from './libs/admin-layout/index'
+import AdminLayout from "./libs/admin-layout/index";
 
-
-export { AdminLayout }
+export { AdminLayout };

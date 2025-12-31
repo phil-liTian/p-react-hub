@@ -15,7 +15,10 @@ export const layouts: Record<string, () => Promise<any>> = {
 };
 
 export const pages: Record<string, () => Promise<any>> = {
+"admin_(base)_about": () => import("@/pages/admin/(base)/about/index.tsx"),
+"admin_(base)_function": () => import("@/pages/admin/(base)/function/index.tsx"),
 "admin_(base)_home": () => import("@/pages/admin/(base)/home/index.tsx"),
+"admin_(base)_user-center": () => import("@/pages/admin/(base)/user-center/index.tsx"),
 "admin": () => import("@/pages/admin/index.tsx"),
 "douyin_home": () => import("@/pages/douyin/home/index.tsx"),
 };

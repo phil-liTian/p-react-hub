@@ -256,7 +256,7 @@ const Home = () => {
               架构开发的企业级后台管理系统，采用优雅的路由设计、自定义脚本自动化处理，支持模块化开发和灵活的权限管理
             </p>
             <Link
-              to="/admin"
+              to="/admin/home"
               style={{
                 display: "inline-block",
                 padding: "12px 24px",

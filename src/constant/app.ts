@@ -1,0 +1,1 @@
+export const GLOBAL_SIDER_MENU_ID = "__GLOBAL_SIDER_MENU__";

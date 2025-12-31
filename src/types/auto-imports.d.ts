@@ -6,7 +6,9 @@
 // biome-ignore lint: disable
 export {}
 declare global {
+  const AMenu: typeof import('antd').Menu
   const Activity: typeof import('react').Activity
+  const FC: typeof import('react').FC
   const Fragment: typeof import('react').Fragment
   const Link: typeof import('react-router-dom').Link
   const NavLink: typeof import('react-router-dom').NavLink
@@ -54,4 +56,10 @@ declare global {
   const useState: typeof import('react').useState
   const useSyncExternalStore: typeof import('react').useSyncExternalStore
   const useTransition: typeof import('react').useTransition
+}
+// for type re-export
+declare global {
+  // @ts-ignore
+  export type { FC } from 'react'
+  import('react')
 }
