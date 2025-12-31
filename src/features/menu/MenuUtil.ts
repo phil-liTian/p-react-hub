@@ -1,3 +1,4 @@
+import { $t } from "@/locales";
 import type { RouteObject } from "react-router-dom";
 
 export function filterRoutesToMenus(routes: RouteObject[]) {
@@ -17,11 +18,13 @@ export function filterRoutesToMenus(routes: RouteObject[]) {
 
 function getGlobalMenuByBaseRoute(route: RouteObject): App.Global.Menu {
   const { path } = route;
-  const { title = "test" } = route.handle || {};
+  const { title, i18nKey } = route.handle || {};
+  const label = i18nKey ? $t(i18nKey) : title;
+
   const menu: App.Global.Menu = {
     title,
     key: path || "",
-    label: title,
+    label,
   };
 
   return menu;

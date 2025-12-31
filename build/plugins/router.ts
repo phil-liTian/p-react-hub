@@ -4,17 +4,19 @@ interface RouteMeta extends Record<string | number, unknown> {}
 export function setupElegantRouter() {
   return ElegantReactRouter({
     onRouteMetaGen(routeName) {
-      const key = routeName.replace('admin_', '')
-      let meta: RouteMeta = {}
+      const key = routeName.replace("admin_", "");
+      let meta: RouteMeta = {};
 
-      if ( routeName.startsWith('admin_') && key ) {
+      if (routeName.startsWith("admin_") && key) {
+        console.log("routeName", routeName);
+
         meta = {
-          i18nKey: `route.${key}`,
-          title: key
-        }
+          i18nKey: `route.${routeName}`,
+          title: key,
+        };
       }
-      
-      return meta
-    }
+
+      return meta;
+    },
   });
 }

@@ -16,7 +16,7 @@ export const generatedRoutes: ElegantConstRoute[] = [
     matchedFiles: ['admin', '/src/pages/admin/index.tsx', '/src/pages/admin/loading.tsx', null],
     name: 'admin',
     path: '/admin',
-    handle: { title: 'admin' },
+    handle: {},
     children: [
       {
         matchedFiles: ['admin_(base)', null, null, null],
@@ -26,25 +26,25 @@ export const generatedRoutes: ElegantConstRoute[] = [
             matchedFiles: [null, '/src/pages/admin/(base)/about/index.tsx', null, null],
             name: 'admin_(base)_about',
             path: '/admin/about',
-            handle: { title: 'admin_(base)_about', i18nKey: 'route.(base)_about' }
+            handle: { i18nKey: 'route.admin_(base)_about', title: '(base)_about' }
           },
           {
             matchedFiles: [null, '/src/pages/admin/(base)/function/index.tsx', null, null],
             name: 'admin_(base)_function',
             path: '/admin/function',
-            handle: { title: 'admin_(base)_function', i18nKey: 'route.(base)_function' }
+            handle: { i18nKey: 'route.admin_(base)_function', title: '(base)_function' }
           },
           {
             matchedFiles: [null, '/src/pages/admin/(base)/home/index.tsx', null, null],
             name: 'admin_(base)_home',
             path: '/admin/home',
-            handle: { title: 'admin_(base)_home', i18nKey: 'route.(base)_home' }
+            handle: { i18nKey: 'route.admin_(base)_home', title: '(base)_home' }
           },
           {
             matchedFiles: [null, '/src/pages/admin/(base)/user-center/index.tsx', null, null],
             name: 'admin_(base)_user-center',
             path: '/admin/user-center',
-            handle: { title: 'admin_(base)_user-center', i18nKey: 'route.(base)_user-center' }
+            handle: { i18nKey: 'route.admin_(base)_user-center', title: '(base)_user-center' }
           }
         ],
         path: null
@@ -55,15 +55,15 @@ export const generatedRoutes: ElegantConstRoute[] = [
     matchedFiles: [null, null, null, null],
     name: 'douyin',
     path: '/douyin',
-    handle: { title: 'douyin' },
+    handle: {},
     children: [
       {
         matchedFiles: [null, '/src/pages/douyin/home/index.tsx', null, null],
         name: 'douyin_home',
         path: '/douyin/home',
-        handle: { title: 'douyin_home' }
+        handle: {}
       }
     ]
   },
-  { matchedFiles: [null, '404', null, null], name: 'notFound', path: '*', handle: { title: 'notFound' } }
+  { matchedFiles: [null, '404', null, null], name: 'notFound', path: '*', handle: {} }
 ];

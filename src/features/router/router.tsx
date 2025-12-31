@@ -23,8 +23,13 @@ function initRouter() {
 const navigator = () => {
   const { reactRouter } = initRouter();
 
+  function navigate(path) {
+    reactRouter.navigate(path);
+  }
+
   return {
     reactRouter,
+    navigate,
   };
 };
 

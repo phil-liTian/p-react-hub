@@ -14,7 +14,7 @@ export function transformElegantRoutesToReactRoutes(routes) {
 }
 
 function transformElegantRoutesToReactRoute(route) {
-  const { matchedFiles, path, children, name } = route;
+  const { matchedFiles, path, children, name, handle } = route;
 
   function converConfig(m: any) {
     const { default: Component } = m;
@@ -40,10 +40,15 @@ function transformElegantRoutesToReactRoute(route) {
     return null;
   }
 
+  function getHandle() {
+    return handle;
+  }
+
   const reactRoute = {
     children: [],
     path,
     id: name,
+    handle: getHandle(),
     HydrateFallback: matchedFiles[2]
       ? loadings[matchedFiles[2]]
       : loadings["/src/pages/admin/loading.tsx"],

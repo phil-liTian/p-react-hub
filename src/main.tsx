@@ -6,6 +6,7 @@ import { createRoot } from "react-dom/client";
 import "virtual:uno.css";
 import App from "./App.tsx";
 import "./style/index.less";
+import { setupI18n } from "./locales";
 
 // createRoot(document.getElementById("root")!).render(
 //   <StrictMode>
@@ -21,6 +22,8 @@ function setupApp() {
   const root = createRoot(container);
 
   root.render(<App />);
+
+  setupI18n();
 }
 
 setupApp();

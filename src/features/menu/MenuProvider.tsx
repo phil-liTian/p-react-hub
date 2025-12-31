@@ -17,8 +17,6 @@ export const MenuProvider: FC<PropsWithChildren> = ({ children }) => {
     return filterRoutesToMenus(getBaseChildrenRoutes(adminRoutes[0].children));
   }, [adminRoutes[0].children]);
 
-  console.log("menus", menus);
-
   const mixMenuContext = {
     allMenus: menus,
   };
